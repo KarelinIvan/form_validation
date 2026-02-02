@@ -60,3 +60,6 @@ function validateForm(email, password, phoneNumber) {
         console.log("Номер валидный");
     }
 }
+
+// Пример вызова функции
+validateForm("example@example.com", "Password123!", "1234567890");
