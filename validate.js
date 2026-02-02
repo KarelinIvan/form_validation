@@ -37,3 +37,26 @@ function validatePhoneNumber(phoneNumber) {
     const regex = /^(\(?\d{3}\)?[-\s]?\d{3}[-\s]?\d{4}$)|^\d{10}$/;
     return regex.test(phoneNumber);
 }
+
+function validateForm(email, password, phoneNumber) {
+    // Валидация Email
+    if (!validateEmail(email)) {
+        console.log("Неверный формат Email");
+    } else {
+        console.log("Email валидный");
+    }
+
+    // Валидация пароля
+    if (!validatePassword(password)) {
+        console.log("Пароль должен содержать минимум 8 символов, включая заглавную букву и цифру");
+    } else {
+        console.log("Пароль валидный");
+    }
+
+    // Валидация номера телефона
+    if (!validatePhoneNumber(phoneNumber)) {
+        console.log("Неверный формат номера телефона");
+    } else {
+        console.log("Номер валидный");
+    }
+}
